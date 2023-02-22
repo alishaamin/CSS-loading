@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader-Animation</title>
+    <link rel="icon" href="/logo.png">
+
+    <!-- styles -->
+    <style>
+      .loader{
+        background: #0F9D58;
+        height:10px;
+        width:80px;
+        border-radius:10px;
+        position:relative;
+        animation: loader 1.8s ease-in-out infinite; 
+      }
+      .loader::before, .loader::after{
+        content:"";
+        position:absolute;
+        height:10px;
+        border-radius:10px;
+        left:20px;
+        animation: loader 1.8s ease-in-out infinite; 
+      }
+      .loader::before{
+        background: #F4B400;
+        top:20px;
+        width:50px;
+      }
+      .loader::after{
+        background: #DB4437;
+        top:-20px;
+        width:60px;
+      }
+
+      @keyframes loader {
+        0% {
+          transform: translateX(50px) scale(1);
+        }
+        
+        50% {
+          transform: translateX(-30px) scale(1.1);
+        }
+        100% {
+          transform: translateX(50px) scale(1);
+        }
+      }
+
+      body{
+        padding:200px;
+      }
+    </style>
+   
+  </head>
+  <body>
+    <div class="loader"></div>
+
+    <!-- javascript -->
+    <script></script>
+  </body>
+</html>

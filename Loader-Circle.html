@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loader-Circle</title>
+        <link rel="icon" href="/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--CSS-->
+        <style>
+            .container {
+                height: 150vh;
+                width: 200vw;
+                font-family: Poppins;
+                background-color: #000;
+            }
+
+            .loader {
+                height: 50px;
+                width: 250px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            .circle {
+                animation: loader 3s ease-in-out infinite;
+                height: 50px;
+                width: 50px;
+                border:2px solid #fff;
+                border-radius: 50%;
+                background-color: black;
+                position: absolute;
+            }
+            .circle:first-child {
+                background-color: #4285F4;
+                animation-delay: 0.5s;
+            }
+            .circle:nth-child(2) {
+                background-color: #34A853;
+                animation-delay: 0.4s;
+            }
+            .circle:nth-child(3) {
+                background-color: #FBBC05;
+                animation-delay: 0.3s;
+            }
+            .circle:nth-child(4) {
+                background-color: #EA4335;
+                animation-delay: 0.2s;
+            }
+            .circle:nth-child(5) {
+                background-color: #16233b;
+                animation-delay: 0.1s;
+            }
+            .circle:last-child {
+                background-color: #0079c1;
+                animation-delay: 0s;
+            }
+            .text {
+                position: absolute;
+                top: 200%;
+                left: 0;
+                right: 0;
+                width: 4rem;
+                margin: auto;
+            }
+            .text:after {
+                content: "Loading";
+                font-weight: bold;
+                animation: loading-text 3s infinite;
+            }
+
+            @keyframes loader {
+                15% {
+                    transform: translateX(0);
+                }
+                50% {
+                    transform: translateX(200px);
+                }
+                70% {
+                    transform: translateX(200px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+      <div class='container'>
+        <div class='loader'>
+          <span class='circle'></span>
+          <span class='circle'></span>
+          <span class='circle'></span>
+          <span class='circle'></span>
+          <span class='circle'></span>
+          <span class='circle'></span>
+        </div>
+      </div>
+          
+     <!--JS-->
+     <script></script>
+    </body>
+</html>
