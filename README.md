@@ -1,2 +1,2 @@
 # CSS-loading
-CSS loading animations i
+CSS loading animations
